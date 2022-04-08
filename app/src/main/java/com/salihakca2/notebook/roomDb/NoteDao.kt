@@ -14,8 +14,8 @@ interface NoteDao {
     fun getAll(): Flowable<List<Note>>
 
     @Insert
-    fun insert(note: Note) : Completable //Insert işlemi
+    fun insert(note: Note) : Completable
 
     @Delete
-    fun delete(note: Note) : Completable //Delete İşlemi
+    fun delete(note: Note) : Completable
 }

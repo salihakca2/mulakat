@@ -43,13 +43,12 @@ class MainActivity : AppCompatActivity() {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(this::handleResponse)
         )
-
-        //saat 13
     }
     private fun handleResponse(noteList: List<Note>){
         binding.recyclerView.layoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.HORIZONTAL)
         val noteAdapter = NoteAdapter(noteList)
         binding.recyclerView.adapter = noteAdapter
+
 
     }
 
